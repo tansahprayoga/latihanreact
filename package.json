@@ -1,0 +1,23 @@
+{
+  "name": "latihanreact",
+  "version": "1.0.0",
+  "description": "Aplikasi React js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tansahprayoga/latihanreact.git"
+  },
+  "keywords": [
+    "react",
+    "js"
+  ],
+  "author": "tansah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tansahprayoga/latihanreact/issues"
+  },
+  "homepage": "https://github.com/tansahprayoga/latihanreact#readme"
+}
