@@ -1,17 +1,28 @@
 import React, {useReducer} from 'react';
 import { Container, Row, Col, Card, CardImg, Button } from 'reactstrap';
 
-const initialState = 0
+const initialState = {
+    jumlah: 1,
+    hargasatuan: 10000,
+    hargatotal: 10000
+}
 
 const reducer = (state, action) => {
-    switch (action) {
-        case 'tambah': return state + 1
-        case 'kurang': return state - 1
+    switch (action. type) {
+        case 'tambah': return {
+            ...state,
+            jumlah: state.jumlah + 1,
+            hargatotal: state.hargasatuan + (state.hargasatuan * state.jumlah)
+        }
+        case 'kurang': return {
+            ...state,
+            jumlah: state.jumlah - 1,
+            hargatotal: (state.hargasatuan * state.jumlah) - state.hargasatuan
+        }
         default:
             return state
     }
 }
-
 function HooksReducer() {
 
     const[count, dispatch] = useReducer(reducer, initialState)
@@ -27,17 +38,21 @@ function HooksReducer() {
                 <Col xs="6">
                     <h3>Action Figure Naruto</h3>
                     <p>Harga</p>
-                    <h3>Rp. 158.000</h3>
+                   
+                    <h3>Rp. {count.hargasatuan}</h3>
                     <p>Jumlah</p>
                     <Row>
-                        <Col><Button onClick={()=>dispatch('tambah')} color="danger">+</Button></Col>
-                        <Col>{count}</Col>
-                        <Col><Button onClick={()=>dispatch('kurang')} >-</Button></Col>
+                
+                        <Col><Button onClick={()=>dispatch({type:'tambah'})} color="danger">+</Button></Col>
+                        <Col>{count.jumlah}</Col>
+                        <Col><Button onClick={()=>dispatch({type:'kurang'})} >-</Button></Col>
+
                     </Row>
+                    <br/>
+                    <Button color="success" size="lg">Total Rp. {count.hargatotal}</Button>
                 </Col>
             </Row>
         </Container>
     );
 }
-
 export default HooksReducer;
