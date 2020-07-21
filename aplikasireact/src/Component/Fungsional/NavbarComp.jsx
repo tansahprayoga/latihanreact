@@ -15,13 +15,10 @@ import {
 } from 'reactstrap';
 import {NavLink} from 'react-router-dom'
 import { CartContext } from '../../CartContext';
-
 const NavbarComp = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
-
     const {value, setValue} = useContext(CartContext)
-
     return (
         <div>
             <Navbar color="light" light expand="md">
@@ -45,15 +42,15 @@ const NavbarComp = (props) => {
                             <NavLink to="/hooks" className="nav-link">Hook</NavLink>
                         </NavItem>
                         <NavItem>
-                            
                             <NavLink to="/useeffects" className="nav-link">Use Effects</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink to="/produk" className="nav-link">Produk</NavLink>
                         </NavItem>
-
+                        <NavItem>
+                            <NavLink to="/reducer" className="nav-link">Reducer</NavLink>
+                        </NavItem>
                     </Nav>
-                   
 
                     <NavbarText>
                         <Button color="danger">
