@@ -13,11 +13,9 @@ import {
     DropdownItem,
     NavbarText
 } from 'reactstrap';
-
 const NavbarComp = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
-
     return (
         <div>
             <Navbar color="light" light expand="md">
@@ -31,6 +29,9 @@ const NavbarComp = (props) => {
                         <NavItem>
                             <NavLink href="/about">About</NavLink>
                         </NavItem>
+                        <NavItem>
+                            <NavLink href="/mahasiswa">Mahasiswa</NavLink>
+                        </NavItem>
                     </Nav>
                     <NavbarText>Simple Text</NavbarText>
                 </Collapse>
@@ -38,5 +39,4 @@ const NavbarComp = (props) => {
         </div>
     )
 }
-
-export default NavbarComp 
+export default NavbarComp
