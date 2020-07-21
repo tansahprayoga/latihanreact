@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/tansahprayoga/latihanreact/issues"
   },
-  "homepage": "https://github.com/tansahprayoga/latihanreact#readme"
+  "homepage": "https://github.com/tansahprayoga/latihanreact#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "reactstrap": "^8.5.1"
+  }
 }
