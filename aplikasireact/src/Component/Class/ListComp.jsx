@@ -2,20 +2,16 @@ import React, { PureComponent } from 'react';
 import axios from 'axios'
 import qs from 'querystring'
 import {Table, Button, Container, NavLink, Alert} from 'reactstrap'
-
 const api  = 'http://localhost:3002'
-
 class ListComp extends PureComponent {
     constructor(props) {
         super(props)
-
         this.state = {
             mahasiswa: [],
             response: '',
             display: 'none'
         }
     }
-
     componentDidMount() {
         axios.get(api+'/tampil').then(res=>{
             this.setState({
@@ -23,11 +19,11 @@ class ListComp extends PureComponent {
             })
         })
     }
-
     render() {
         return (
             <Container>
                 <h2>Data mahasiswa</h2>
+                <NavLink href="/mahasiswa/tambah"><Button color="success">Tambah Data</Button></NavLink>
                 <hr/>
                 <Table className="table-bordered">
                     <thead>
@@ -46,7 +42,7 @@ class ListComp extends PureComponent {
                                 <td>{mahasiswa.jurusan}</td>
                                 <td>Edit | Hapus</td> 
                             </tr>
-
+                            
                             )}
                     </tbody>
                 </Table>
@@ -54,5 +50,4 @@ class ListComp extends PureComponent {
         );
     }
 }
-
-export default ListComp; 
+export default ListComp;
