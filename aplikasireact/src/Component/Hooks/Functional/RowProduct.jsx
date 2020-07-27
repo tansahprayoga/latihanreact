@@ -6,14 +6,15 @@ import {
 import { useContext } from 'react';
 import { CartContext } from '../../../CartContext';
 
-function RowProduct () {
+function RowProduct() {
 
     const { value, setValue } = useContext(CartContext)
 
     return (
         <Col>
             <Card>
-                <CardImg top width="100%" src="https://placeimg.com/640/480/tech" alt="Card image cap" />
+                <CardImg top width="100%" src="https://i.ibb.co/RYKqQqc/logo2.jpg" alt="logo2" />
+               
                 <CardBody>
                     <CardTitle> Asus Pro </CardTitle>
                     <CardSubtitle>Rp. 6.0000.000</CardSubtitle>

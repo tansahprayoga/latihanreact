@@ -13,11 +13,11 @@ function HooksReducer() {
             <Row>
                 <Col xs="6">
                     <Card>
-                        <CardImg top width="100%" src="https://placeimg.com/640/480/tech" alt="Card image cap" />
+                        <CardImg top width="100%" src="https://i.ibb.co/q1t66XK/logo-fiks.jpg" alt="logo-fiks" />
                     </Card>
                 </Col>
-                <Col xs="6">
-                    <h3>LENOVO</h3>
+               <Col xs="6">
+                    <h3>Furniture</h3>
                     <p>Harga</p>
                    
                     <h3>Rp. {countContext.keranjangState.hargatotal}</h3>

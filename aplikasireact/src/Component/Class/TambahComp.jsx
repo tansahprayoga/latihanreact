@@ -3,16 +3,16 @@ import axios from 'axios'
 import {Container, Col, Row, Form, FormGroup, Alert, Label, Input, Button} from 'reactstrap'
 import {Link} from 'react-router-dom'
 
-const api = 'http://localhost:3001'
+const api = 'http://localhost:3003'
 
 class TambahComp extends PureComponent {
     constructor(props) {
         super(props)
 
         this.state = {
-            nim: '',
-            nama: '',
-            jurusan: '',
+            nama_produk: '',
+            harga_produk: '',
+            stok_produk: '',
             response: '',
             display: 'none'
         }
@@ -22,11 +22,11 @@ class TambahComp extends PureComponent {
         this.setState({[e.target.name] : e.target.value})
     }
 
-    Addmahasiswa = () => {
+    Addproduk = () => {
         axios.post(api+ '/tambah', {
-            nim: this.state.nim,
-            nama: this.state.nama,
-            jurusan: this.state.jurusan
+            nama_produk: this.state.nama_produk,
+            harga_produk: this.state.harga_produk,
+            stok_produk: this.state.stok_produk
         }).then(json =>  {
             if(json.data.status === 200){
                 this.setState({
@@ -51,29 +51,29 @@ class TambahComp extends PureComponent {
                 </Alert>
                 <Form className="form">
                     <Col>
-                    <Label>NIM</Label>
+                    <Label>NAMA PRODUK</Label>
                     <FormGroup>
                         <Row>
                            <Col>
-                                <Input type="text" name="nim" value={this.state.nim} onChange={this.handleChange} placeholder="Masukan NIM"/>
+                                <Input type="text" name="nama_produk" value={this.state.nama_produk} onChange={this.handleChange} placeholder="Masukan nama_produk"/>
                            </Col> 
                         </Row>
                     </FormGroup>
 
-                    <Label>Nama</Label>
+                    <Label>HARGA PRODUK</Label>
                     <FormGroup>
                         <Row>
                            <Col>
-                                <Input type="text" name="nama" value={this.state.nama} onChange={this.handleChange} placeholder="Masukan Nama"/>
+                                <Input type="text" name="harga_produk" value={this.state.harga_produk} onChange={this.handleChange} placeholder="Masukan harga_produk"/>
                            </Col> 
                         </Row>
                     </FormGroup>
 
-                    <Label>Jurusan</Label>
+                    <Label>STOK PRODUK</Label>
                     <FormGroup>
                         <Row>
                            <Col>
-                                <Input type="text" name="jurusan" value={this.state.jurusan} onChange={this.handleChange} placeholder="Masukan Jurusan"/>
+                                <Input type="text" name="stok_produk" value={this.state.stok_produk} onChange={this.handleChange} placeholder="Masukan stok_produk"/>
                            </Col> 
                         </Row>
                     </FormGroup>
@@ -81,7 +81,7 @@ class TambahComp extends PureComponent {
                     <FormGroup>
                         <Row>
                            <Col>
-                                <Button type="button" onClick={this.Addmahasiswa}>Submit</Button>
+                                <Button type="button" onClick={this.Addproduk}>Submit</Button>
                            </Col> 
                         </Row>
                     </FormGroup>

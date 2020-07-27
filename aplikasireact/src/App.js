@@ -58,9 +58,9 @@ const App = () => {
         <switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/mahasiswa" component={ListComp} />
-          <Route exact path="/mahasiswa/tambah" component={TambahComp} />
-          <Route exact path="/mahasiswa/edit" component={EditComp} />
+          <Route exact path="/produk" component={ListComp} />
+          <Route exact path="/produk/tambah" component={TambahComp} />
+          <Route exact path="/produk/edit" component={EditComp} />
           <Route exact path="/kelas" component={KelasComp} />
           <Route exact path="/hooks" component={HooksComp} />
           <Route exact path="/useeffects" component={HooksUseEffects} />

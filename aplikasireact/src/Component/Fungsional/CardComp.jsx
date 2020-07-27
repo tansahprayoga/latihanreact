@@ -9,11 +9,11 @@ function CardComp(props) {
     return (
         <div>
             <Card>
-                <CardImg top width="100%" src="https://placeimg.com/640/480/tech" alt="Card image cap" />
+                <CardImg top width="100%" src="https://i.ibb.co/mBTrhNs/furnitur-miniblok-serba-hemat.jpg" alt="furnitur-miniblok-serba-hemat" />
                 <CardBody>
                     <CardTitle><h3>{props.judul}</h3></CardTitle>
                     <CardSubtitle>{props.tanggal}</CardSubtitle>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                    <CardText>Produk Furniture dengan berbahan Almunium yang Tahan Karat dan Awet Jangka Panjang</CardText>
                     <Button>
                         <Link to = {
                             {

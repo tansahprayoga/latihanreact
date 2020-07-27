@@ -4,17 +4,17 @@ import { Container, Col, Row, Form, FormGroup, Alert, Label, Input, Button } fro
 import { Link } from 'react-router-dom'
 import qs from 'querystring'
 
-const api = 'http://localhost:3001'
+const api = 'http://localhost:3003'
 
 class EditComp extends PureComponent {
     constructor(props) {
         super(props)
 
         this.state = {
-            id_mahasiswa: this.props.location.state.id_mahasiswa,
-            nim: this.props.location.state.nim,
-            nama: this.props.location.state.nama,
-            jurusan: this.props.location.state.jurusan,
+            id_produk: this.props.location.state.id_produk,
+            nama_produk: this.props.location.state.nama_produk,
+            harga_produk: this.props.location.state.harga_produk,
+            stok_produk: this.props.location.state.stok_produk,
             response: '',
             display: 'none'
         }
@@ -24,12 +24,12 @@ class EditComp extends PureComponent {
         this.setState({[e.target.name] : e.target.value})
     }
 
-    ubahMahasiswa = (idmahasiswa) => {
+    ubahproduk = (id_produk) => {
         const data = qs.stringify({
-            id_mahasiswa: idmahasiswa,
-            nim: this.state.nim,
-            nama: this.state.nama,
-            jurusan: this.state.jurusan
+            id_produk: id_produk,
+            nama_produk: this.state.nama_produk,
+            harga_produk: this.state.harga_produk,
+            stok_produk: this.state.stok_produk
         });
 
         axios.put(api+ '/ubah', data)
@@ -57,29 +57,29 @@ class EditComp extends PureComponent {
                 </Alert>
                 <Form className="form">
                     <Col>
-                        <Label>NIM</Label>
+                        <Label>NAMA PRODUK</Label>
                         <FormGroup>
                             <Row>
                                 <Col>
-                                    <Input type="text" name="nim" value={this.state.nim} onChange={this.handleChange} placeholder="Masukan NIM" />
+                                    <Input type="text" name="nama_produk" value={this.state.nama_produk} onChange={this.handleChange} placeholder="Masukan Nama Produk" />
                                 </Col>
                             </Row>
                         </FormGroup>
 
-                        <Label>Nama</Label>
+                        <Label>HARGA PRODUK</Label>
                         <FormGroup>
                             <Row>
                                 <Col>
-                                    <Input type="text" name="nama" value={this.state.nama} onChange={this.handleChange} placeholder="Masukan Nama" />
+                                    <Input type="text" name="harga_produk" value={this.state.harga_produk} onChange={this.handleChange} placeholder="Masukan harga_produk" />
                                 </Col>
                             </Row>
                         </FormGroup>
 
-                        <Label>Jurusan</Label>
+                        <Label>STOK PRODUK</Label>
                         <FormGroup>
                             <Row>
                                 <Col>
-                                    <Input type="text" name="jurusan" value={this.state.jurusan} onChange={this.handleChange} placeholder="Masukan Jurusan" />
+                                    <Input type="text" name="stok_produk" value={this.state.stok_produk} onChange={this.handleChange} placeholder="Masukan stok_produk" />
                                 </Col>
                             </Row>
                         </FormGroup>
@@ -87,7 +87,7 @@ class EditComp extends PureComponent {
                         <FormGroup>
                             <Row>
                                 <Col>
-                                    <Button type="button" onClick={()=>this.ubahMahasiswa(this.state.id_mahasiswa)}>Update</Button>
+                                    <Button type="button" onClick={()=>this.ubahproduk(this.state.id_produk)}>Update</Button>
                                 </Col>
                             </Row>
                         </FormGroup>

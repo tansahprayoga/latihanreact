@@ -2,45 +2,40 @@ import React, { useEffect, useState } from 'react'
 import { Container, Table, Button } from 'reactstrap';
 import axios from 'axios'
 
-const api = 'http://localhost:3001'
+const api = 'http://localhost:3003'
 
 function HooksUseEffects() {
 
-    const [mahasiswa, setMahasiswa] = useState([])
+    const [produk, setproduk] = useState([])
 
     useEffect(() => {
         console.log("Memanggil Use Effect")
 
         axios.get(api + '/tampil').then(res => {
-            setMahasiswa(res.data.values)
+            setproduk(res.data.values)
         })
     }, [])
 
     return (
         <Container>
-            <h2> Data mahasiswa</h2>
+            <h2> DATA PRODUK FURNITURE</h2>
             <hr />
             <Table className="table-bordered">
                 <thead>
                     <tr>
-                        <th>NIM</th>
-                        <th>Nama</th>
-                        <th>Jurusan</th>
-                        <th>Opsi</th>
+                        <th>Nama Produk</th>
+                        <th>Harga Produk</th>
+                        <th>Stok Produk</th>
+                       
                     </tr>
                 </thead>
                 <tbody>
-                    {mahasiswa.map(mahasiswa =>
-                        <tr key={mahasiswa.id_mahasiswa}>
-                            <td>{mahasiswa.nim}</td>
-                            <td>{mahasiswa.nama}</td>
-                            <td>{mahasiswa.jurusan}</td>
-                            <td>
-                                <Button> Edit </Button>
-
-                                <span> </span>
-                                <Button color="danger"> Delete </Button>
-                            </td>
+                    {produk.map(produk =>
+                        <tr key={produk.id_produk}>
+                            <td>{produk.nama_produk}</td>
+                            <td>{produk.harga_produk}</td>
+                            <td>{produk.stok_produk}</td>
+                           
                         </tr>
                     )}
                 </tbody>

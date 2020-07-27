@@ -21,8 +21,11 @@ const NavbarComp = (props) => {
     const {value, setValue} = useContext(CartContext)
     return (
         <div>
+            <p class="bg-primary text-green"><marquee>TERBAIK & BERKWALITAS</marquee></p>
             <Navbar color="light" light expand="md">
-                <NavbarBrand to="/">reactstrap</NavbarBrand>
+             
+
+                <NavbarBrand to="/">PROJECT UAS</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
@@ -30,25 +33,19 @@ const NavbarComp = (props) => {
                             <NavLink to="/" className="nav-link">Home</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="/about" className="nav-link">About</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink to="/mahasiswa" className="nav-link">Mahasiswa</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink to="/kelas" className="nav-link">Class</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink to="/hooks" className="nav-link">Hook</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink to="/useeffects" className="nav-link">Use Effects</NavLink>
+                            <NavLink to="/about" className="nav-link">Profile</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink to="/produk" className="nav-link">Produk</NavLink>
                         </NavItem>
+                       
+                        
                         <NavItem>
-                            <NavLink to="/reducer" className="nav-link">Reducer</NavLink>
+                            <NavLink to="/useeffects" className="nav-link">Katalog</NavLink>
+                        </NavItem>
+                       
+                        <NavItem>
+                            <NavLink to="/reducer" className="nav-link">Penjualan</NavLink>
                         </NavItem>
                     </Nav>
 
@@ -58,6 +55,7 @@ const NavbarComp = (props) => {
                             <span className="badge badge-light">{value}</span>
                         </Button>
                     </NavbarText>
+                    
                 </Collapse>
             </Navbar>
         </div>
