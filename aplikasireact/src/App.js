@@ -14,12 +14,15 @@ import { CartContext } from './CartContext';
 import ProductComp from './Component/Hooks/Functional/ProductComp';
 import HooksReducer from './Component/Hooks/Functional/HooksReducer';
 import Tagihan from './Component/Hooks/Functional/Tagihan';
-
+import LoginComp from'./Component/Fungsional/LoginComp';
+import DaftarComp from './Component/Fungsional/DaftarComp';
+//import Home from './Component/Fungsional/Home';
+import Beranda from './Component/Class/Beranda';
 // import BootstrapComp from './Component/Class/BootstrapComp';
 //import Parent from './Component/Class/Parent';
 // import logo from './logo.svg';
 // import './App.css';
-// import Home from './Component/Fungsional/Home';
+
 // import Beranda from './Component/Class/Beranda';
 
 const initialState = {
@@ -56,7 +59,10 @@ const App = () => {
         <NavbarComp />
         <keranjangContext.Provider value={{keranjangState: count, keranjangDispatch:dispatch}}>
         <switch>
-          <Route exact path="/" component={HomePage} />
+        <Route exact path="/" component={LoginComp}/>
+      <Route exact path="/daftar" component={DaftarComp}/>
+      <Route exact path="/beranda" component={Beranda}/>
+          <Route exact path="/homepage" component={HomePage} />
           <Route exact path="/about" component={About} />
           <Route exact path="/produk" component={ListComp} />
           <Route exact path="/produk/tambah" component={TambahComp} />

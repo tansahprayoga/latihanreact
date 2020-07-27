@@ -45,9 +45,13 @@ const NavbarComp = (props) => {
                         </NavItem>
                        
                         <NavItem>
-                            <NavLink to="/reducer" className="nav-link">Penjualan</NavLink>
+                            <NavLink to="/reducer" className="nav-link">Transaksi</NavLink>
                         </NavItem>
+
                     </Nav>
+                    <NavItem>
+                <NavLink to="/"className="nav-link">Logout</NavLink>
+              </NavItem>
 
                     <NavbarText>
                         <Button color="danger">

@@ -16,9 +16,9 @@ function RowProduct() {
                 <CardImg top width="100%" src="https://i.ibb.co/RYKqQqc/logo2.jpg" alt="logo2" />
                
                 <CardBody>
-                    <CardTitle> Asus Pro </CardTitle>
-                    <CardSubtitle>Rp. 6.0000.000</CardSubtitle>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                    <CardTitle> Furniture </CardTitle>
+                    <CardSubtitle>Rp. 2.500.000</CardSubtitle>
+                    <CardText>Produk Furniture Almunium dengan design yang elegan </CardText>
                     <Button onClick={() => setValue(value + 1)}>Tambahkan Keranjang</Button>
                 </CardBody>
             </Card>
