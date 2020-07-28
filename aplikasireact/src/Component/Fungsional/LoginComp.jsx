@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Container } from 'reactstrap';
 const LoginComp = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -12,6 +13,9 @@ const LoginComp = () => {
         setPassword(value)
     }
     return (
+        <Container>
+            
+     <p><center> <h1>LOGIN</h1> </center></p>   
         <div style={{ marginTop: "170px" }}>
          <div className="container">
             <div className="row justify-content-center">
@@ -22,7 +26,7 @@ const LoginComp = () => {
                                     <div className="text-left">
                                      <label>Username</label>
                                     </div>
-                                    <input type="text" placeholder="email" className="form-control" value={username} onChange={onChangeusername} />
+                                    <input type="text" placeholder="username" className="form-control" value={username} onChange={onChangeusername} />
                                 </div>
                                 <div className="form-group">
                                     <div className="text-left">
@@ -38,7 +42,7 @@ const LoginComp = () => {
                                     </div>
                                     <div className="col-md-6 text-right">
                                         <Link to="/daftar" className="">
-                                            Halaman Pendaftaran
+                                           Sign Up
                             </Link>
                                     </div>
                                 </div>
@@ -48,6 +52,7 @@ const LoginComp = () => {
                 </div>
             </div>
         </div>
+        </Container>
     )
 }
 export default LoginComp

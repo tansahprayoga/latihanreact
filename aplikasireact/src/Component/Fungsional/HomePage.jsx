@@ -42,14 +42,12 @@ function HomePage() {
       <div className="imageatas">
          <center><img src="https://i.ibb.co/RYKqQqc/logo2.jpg" alt="logo2" /></center> 
         </div>
-        <h1 className="display-3 text-center">KAWAN BARU ALMUNIUM</h1>
+        
 
         <p className="lead text-center">PERUSAHAAN YANG BERGERAK DIBIDANG FURNITURE MENGGUNAKAN BAHAN ALMUNIUM</p>
         <hr className="my-2" />
         <p className="text-center">JL. MANGGA 1A CILACAP JAWA TENGAH</p>
-        <p className="lead">
-      <center><Button color="success" >CONTACT</Button></center>    
-        </p>
+        
       </Jumbotron>
 
     </div>

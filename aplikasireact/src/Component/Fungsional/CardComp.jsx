@@ -14,17 +14,11 @@ function CardComp(props) {
                     <CardTitle><h3>{props.judul}</h3></CardTitle>
                     <CardSubtitle>{props.tanggal}</CardSubtitle>
                     <CardText>Produk Furniture dengan berbahan Almunium yang Tahan Karat dan Awet Jangka Panjang</CardText>
-                    <Button>
-                        <Link to = {
-                            {
-                                pathname : '/detail/${props.id}',
-                                state : {
-                                    judul : props.judul,
-                                    tanggal: props.tanggal
-                                }
-                            }
-                        }>Detail</Link>
-                        </Button>
+                    <div className="col-md-6 text-left">
+                                        <button>
+                                            <Link to="/detail" className="btn btn-primary text-left">Detail</Link>
+                                        </button>
+                                    </div>
                 </CardBody>
             </Card>
         </div>
@@ -32,3 +26,5 @@ function CardComp(props) {
 };
 
 export default CardComp;
+
+                                   

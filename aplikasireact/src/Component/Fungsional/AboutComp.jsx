@@ -12,9 +12,7 @@ function AboutComp () {
                 <p className="lead">Perusahaan yang bergerak dibidang barang dan jasa dengan Produksi Barang Furniture Berkwalitas Baik dan Bergaransi</p>
                 <hr className="my-2" />
                 <p>MOTO PERUSAHAAN : BERKARYA BERSAMA BERMAKNA</p>
-                <p className="lead">
-                    <Button color="primary">Learn More</Button>
-                </p>
+               <p>NO.HP :081228346179</p>
             </Jumbotron>
             <Container>
                 <Row>

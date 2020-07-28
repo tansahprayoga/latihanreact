@@ -17,7 +17,7 @@ import Tagihan from './Component/Hooks/Functional/Tagihan';
 import LoginComp from'./Component/Fungsional/LoginComp';
 import DaftarComp from './Component/Fungsional/DaftarComp';
 //import Home from './Component/Fungsional/Home';
-import Beranda from './Component/Class/Beranda';
+//import Beranda from './Component/Class/Beranda';
 // import BootstrapComp from './Component/Class/BootstrapComp';
 //import Parent from './Component/Class/Parent';
 // import logo from './logo.svg';
@@ -61,7 +61,7 @@ const App = () => {
         <switch>
         <Route exact path="/" component={LoginComp}/>
       <Route exact path="/daftar" component={DaftarComp}/>
-      <Route exact path="/beranda" component={Beranda}/>
+      <Route exact path="/detail" component={DetailComp}/>
           <Route exact path="/homepage" component={HomePage} />
           <Route exact path="/about" component={About} />
           <Route exact path="/produk" component={ListComp} />
