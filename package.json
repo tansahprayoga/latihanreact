@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/tansahprayoga/latihanreact#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
     "querystring": "^0.2.0",
     "react": "^16.13.1",
